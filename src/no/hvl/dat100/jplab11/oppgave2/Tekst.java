@@ -15,7 +15,6 @@ public class Tekst extends Innlegg {
 		
 		super(id, bruker, dato);
 		this.tekst = tekst;
-		
 	}
 	
 	public Tekst(int id, String bruker, String dato, int likes, String tekst) {
@@ -27,7 +26,6 @@ public class Tekst extends Innlegg {
 	public String getTekst() {
 		
 		return tekst;
-
 	}
 
 	public void setTekst(String tekst) {
@@ -39,7 +37,6 @@ public class Tekst extends Innlegg {
 	public String toString() {
 		
 		return  "TEKST\n" + super.toString() + tekst +"\n";
-
 	}
 	
 	// Metoden nedenfor er kun for valgfri oppgave 6
