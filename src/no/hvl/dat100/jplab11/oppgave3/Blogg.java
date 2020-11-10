@@ -67,7 +67,7 @@ public class Blogg {
 	
 	public String toString() {
 		
-		String output = "" + innleggtabell.length;
+		String output = "" + innleggtabell.length + "\n";
 		
 		for (int i = 0; i < innleggtabell.length; i++) {
 			output += innleggtabell[i].toString();
