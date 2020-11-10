@@ -30,7 +30,7 @@ public class Blogg {
 	
 	public int finnInnlegg(Innlegg innlegg) {
 
-		for (int i = 0; i < innleggtabell.length; i++) {
+		for (int i = 0; i < nesteledig; i++) {
 			if (innlegg.erLik(innleggtabell[i])) {
 				return i;
 			}
@@ -41,7 +41,7 @@ public class Blogg {
 
 	public boolean finnes(Innlegg innlegg) {
 		
-		for (int i = 0; i < innleggtabell.length; i++) {
+		for (int i = 0; i < nesteledig; i++) {
 			if (innlegg.erLik(innleggtabell[i])) {
 				return true;
 			}
@@ -59,6 +59,7 @@ public class Blogg {
 
 		if (ledigPlass() && !finnes(innlegg)) {
 			innleggtabell[nesteledig] = innlegg;
+			nesteledig++;
 			return true;
 		} else {
 			return false;
@@ -69,7 +70,7 @@ public class Blogg {
 		
 		String output = "" + innleggtabell.length + "\n";
 		
-		for (int i = 0; i < innleggtabell.length; i++) {
+		for (int i = 0; i < nesteledig; i++) {
 			output += innleggtabell[i].toString();
 		}
 		return output;
